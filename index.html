@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font: 18px;
+        }
+
+        .chatboxOuter {
+            height: 700px;
+            width: 30%;
+            background-color: rgb(14, 41, 56);
+            /*
+                Total Screen Width : 100%
+                chatboxOuter Width : 30%
+                Remaining          : (100-30)% = 70 %
+                Distribute in left and right = (70/2)% = 35%
+            */
+            margin-left: 35%;
+            margin-top: 5%;
+            border-radius: 10px;
+            border-color: black;
+            border-width: 1px;
+            border-style: solid;
+        }
+
+        .chatcontent {
+            height: 560px;
+            width: 90%;
+            background-color: blanchedalmond;
+            margin-left: 5%;
+            margin-top: 5%;
+            border-radius: 15px;
+            overflow: hidden;
+            overflow-y: scroll;
+            background-image: url(2.jpg);
+            background-size: cover;
+        }
+
+        .messagebox {
+            width: 90%;
+            /*background-color: brown;*/
+            margin-left: 5%;
+            margin-top: 3%;
+            border-radius: 15px;
+        }
+
+        .reciever {
+            height: 80px;
+            width: 80%;
+            padding: 10px;
+            margin-bottom: -10px;
+        }
+
+        .RProPic {
+            height: 70px;
+            width: 70px;
+            background-color: black;
+            border-radius: 50%;
+            float: left;
+            background-image: url(1.jpg);
+            background-size: cover;
+        }
+
+        .Rmsg {
+            height: 70px;
+            width: 70%;
+            background-color: rgb(17, 212, 212);
+            margin-left: 10px;
+            border-radius: 5px;
+            float: left;
+            padding: 5px;
+        }
+
+
+        .sender {
+            height: 80px;
+            width: 80%;
+            padding: 10px;
+            margin-left: 15%;
+            margin-bottom: -12px;
+        }
+
+        .SProPic {
+            height: 70px;
+            width: 70px;
+            background-color: black;
+            border-radius: 50%;
+            float: right;
+            background-image: url(4.jpg);
+            background-size: cover;
+        }
+
+        .Smsg {
+            height: 70px;
+            width: 70%;
+            background-color: rgb(17, 212, 212);
+            margin-right: 10px;
+            border-radius: 5px;
+            float: right;
+            padding: 5px;
+        }
+
+        .message {
+            height: 80px;
+            width: 80%;
+            background-color: blanchedalmond;
+            float: left;
+        }
+
+        .send {
+            height: 80px;
+            width: 20%;
+            float: left;
+        }
+
+        .sendButton {
+            background-color: #FFFFFF;
+            border: 1px solid #222222;
+            border-radius: 8px;
+            box-sizing: border-box;
+            color: #222222;
+            cursor: pointer;
+            display: inline-block;
+            font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 20px;
+            margin: 0;
+            outline: none;
+            padding: 13px 23px;
+            position: relative;
+            text-align: center;
+            text-decoration: none;
+            touch-action: manipulation;
+            transition: box-shadow .2s, -ms-transform .1s, -webkit-transform .1s, transform .1s;
+            user-select: none;
+            -webkit-user-select: none;
+            width: 105%;
+            height: 80px;
+        }
+
+        .sendButton:focus-visible {
+            box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+            transition: box-shadow .2s;
+        }
+
+        .sendButton:active {
+            background-color: #F7F7F7;
+            border-color: #000000;
+            transform: scale(.96);
+        }
+
+        .sendButton:disabled {
+            border-color: #DDDDDD;
+            color: #DDDDDD;
+            cursor: not-allowed;
+            opacity: 1;
+        }
+
+        .msg {
+            height: 68px;
+            width: 96%;
+            border-radius: 10px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="chatboxOuter">
+        <!--chatbox content are-->
+        <div class="chatcontent">
+
+            <!--reciever message area-->
+            <div class="reciever">
+                <div class="RProPic"></div>
+                <div class="Rmsg">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae vel animi magni
+                </div>
+            </div>
+
+            <!--sender message area-->
+            <div class="sender">
+                <div class="SProPic"></div>
+                <div class="Smsg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab rem ducimus voluptate
+                </div>
+            </div>
+
+            <div class="reciever">
+                <div class="RProPic"></div>
+                <div class="Rmsg">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae vel animi magni
+                </div>
+            </div>
+
+            <!--sender message area-->
+            <div class="sender">
+                <div class="SProPic"></div>
+                <div class="Smsg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab rem ducimus voluptate
+                </div>
+            </div>
+
+            <div class="reciever">
+                <div class="RProPic"></div>
+                <div class="Rmsg">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae vel animi magni
+                </div>
+            </div>
+
+            <!--sender message area-->
+            <div class="sender">
+                <div class="SProPic"></div>
+                <div class="Smsg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab rem ducimus voluptate
+                </div>
+            </div>
+
+            <div class="reciever">
+                <div class="RProPic"></div>
+                <div class="Rmsg">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae vel animi magni
+                </div>
+            </div>
+
+            <!--sender message area-->
+            <div class="sender">
+                <div class="SProPic"></div>
+                <div class="Smsg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab rem ducimus voluptate
+                </div>
+            </div>
+
+            <div class="reciever">
+                <div class="RProPic"></div>
+                <div class="Rmsg">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae vel animi magni
+                </div>
+            </div>
+
+            <!--sender message area-->
+            <div class="sender">
+                <div class="SProPic"></div>
+                <div class="Smsg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab rem ducimus voluptate
+                </div>
+            </div>
+
+        </div>
+        <div class="messagebox">
+            <div class="message">
+                <textarea class="msg"></textarea>
+            </div>
+            <div class="send"><button class="sendButton">SEND</button></div>
+        </div>
+    </div>
+</body>
+
+</html>
